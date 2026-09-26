@@ -1,0 +1,3 @@
+{
+  rigup.enable = true;
+}

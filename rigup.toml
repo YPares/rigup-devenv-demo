@@ -1,0 +1,13 @@
+# The devshell will expose one executable for each rig declared here
+
+# This will create `troubleshooter-entrypoint`, running opencode.
+# This rig uses modules (riglets) from the `rigup` input and from this project's own `riglets` folder
+[rigs.troubleshooter]
+riglets.rigup = ["opencode"]
+riglets.self = ["port-usage"]
+
+# This will create `researcher-entrypoint`, running claude-code.
+# This rig uses riglets from both `rigup` and `agent-skills` inputs
+[rigs.researcher]
+riglets.rigup = ["claude-code", "agent-rig-system"]
+riglets.agent-skills = ["jj-todo-workflow", "research-assistant"]
